@@ -1,10 +1,13 @@
+import Link from "next/link"
 
 
-function Navbars() {
-   const Items = <>
-      <li><a href="/about">About</a></li>
-      <li><a href="/designer">Designer</a></li>
-   </>
+function Navpage() {
+    const items = <>
+       <li><Link href="/about">about</Link></li>
+        <li><Link href="/product">product</Link></li>
+        <li><Link href="/developers">developer</Link></li>
+        <li><Link href="/blogs">blogs</Link></li>
+    </>
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm">
@@ -16,14 +19,14 @@ function Navbars() {
       <ul
         tabIndex={-1}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-         {Items }
+       {items}
       </ul>
     </div>
     <a className="btn btn-ghost text-xl">daisyUI</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-     {Items }
+       {items}
     </ul>
   </div>
   <div className="navbar-end">
@@ -34,4 +37,4 @@ function Navbars() {
   )
 }
 
-export default Navbars
+export default Navpage

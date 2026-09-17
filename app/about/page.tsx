@@ -3,7 +3,7 @@
 function AboutPage() {
   return (
     <div>
-        <h1>This is About us</h1>
+       <h1>Welcom to our About page</h1>
     </div>
   )
 }
