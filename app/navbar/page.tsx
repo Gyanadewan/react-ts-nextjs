@@ -1,12 +1,17 @@
+'use client'
+
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 
 function Navpage() {
+  const pathname = usePathname()
+  console.log("pahtname", pathname)
     const items = <>
-       <li><Link href="/about">about</Link></li>
-        <li><Link href="/product">product</Link></li>
-        <li><Link href="/developers">developer</Link></li>
-        <li><Link href="/blogs">blogs</Link></li>
+       <li className={`${pathname==="/about"?"text-blue-600":""}`}><Link href="/about">about</Link></li>
+        <li className={`${pathname==="/product"?"text-blue-600":""}`}><Link href="/product">product</Link></li>
+        <li className={`${pathname==="/developers"?"text-blue-600":""}`}><Link href="/developers">developer</Link></li>
+        <li className={`${pathname==="/blogs"?"text-blue-600":""}`}><Link href="/blogs">blogs</Link></li>
     </>
   return (
     <div>
